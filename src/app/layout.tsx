@@ -2,16 +2,6 @@ import localFont from '@next/font/local';
 import './globals.css';
 
 
-const atomicMarker = localFont({
-  src: [
-    {
-      path: '../../public/fonts/AtomicMarker/atomicMarker.otf',
-      weight: '400',
-    }
-  ],
-  variable: '--font-marker'
-});
-
 const ceraPro = localFont({
   src: [
     {
@@ -26,20 +16,15 @@ const ceraPro = localFont({
   variable: '--font-cera'
 }); 
 
-const heavitasNeue = localFont({
+const nexaHeavy = localFont({
   src: [
     {
-      path: '../../public/fonts/HeavitasNeue/HeavitasNeueRegular.otf', 
-      weight: '400',
+      path: '../../public/fonts/nexaHeavy/NexaHeavy.otf', 
+      weight: '700',
     },
-    {
-      path: '../../public/fonts/HeavitasNeue/HeavitasNeueBold.otf',
-      weight: '700', 
-    }
   ],
-  variable: '--font-neue'
-});
-
+  variable: '--font-nexa'
+}); 
 
 
 export default function RootLayout({

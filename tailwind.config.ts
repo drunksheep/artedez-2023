@@ -13,8 +13,18 @@ const config: Config = {
     extend: {
       fontFamily: {
         cera: ['var(--font-cera)'],
-        marker: ['var(--font-marker)'], 
-        neue: ['var(--font-neue)'],
+        nexa: ['var(--font-nexa)'], 
+      },
+      colors: {
+        pink: {
+          400: '#ff34cc'
+        },
+        yellow: {
+          400: '#ffcc33',
+        },
+        green: {
+          400: '#25d366'
+        }
       }
     },
   },
