@@ -1,5 +1,8 @@
 'use client'
 
+import About from "./components/About";
+import Brands from "./components/Brands";
+import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -14,6 +17,9 @@ export default function Home() {
         <HeroSection />
         <Services />
         <Plans />
+        <Brands />
+        <About />
+        <Faq />
       </main>
       <Footer />
     </>

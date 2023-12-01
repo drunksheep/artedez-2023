@@ -27,15 +27,20 @@ const config: Config = {
         },
         purple: {
           400: '#1e0b37'
+        },
+        gray: {
+          400: '#58595b'
         }
       },
       fontSize: {
         '12' : '12px',
+        '14' : '14px',
         '18' : '18px',
         '22' : '22px',
         '24' : '24px',
         '28' : '28px',
         '30' : '30px',
+        '34' : '34px',
         '36' : '36px',
         '40' : '40px',
         '50' : '50px',
@@ -43,8 +48,8 @@ const config: Config = {
       },
       container: {
         screens: {
-            xl: '1300px',
-            '2xl' : '1300px'
+            xl: '1200px',
+            '2xl' : '1200px'
         }
       }
     },
