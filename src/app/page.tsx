@@ -1,14 +1,19 @@
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
+'use client'
+
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
+import Plans from "./components/Plans";
+import Services from "./components/Services";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className="bg-black">
-        <section className="hero">
-          
-        </section>
+        <HeroSection />
+        <Services />
+        <Plans />
       </main>
       <Footer />
     </>
