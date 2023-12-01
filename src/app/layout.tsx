@@ -1,4 +1,4 @@
-import localFont from '@next/font/local';
+import localFont from "next/font/local";
 import './globals.css';
 
 
@@ -19,7 +19,7 @@ const ceraPro = localFont({
 const nexaHeavy = localFont({
   src: [
     {
-      path: '../../public/fonts/nexaHeavy/NexaHeavy.otf', 
+      path: '../../public/fonts/NexaHeavy/NexaHeavy.otf', 
       weight: '700',
     },
   ],
@@ -34,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body>{children}</body>
+      <body className="font-cera">{children}</body>
     </html>
   )
 }
