@@ -1,5 +1,6 @@
 'use client'
 
+import About from "./components/About";
 import Brands from "./components/Brands";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -16,6 +17,7 @@ export default function Home() {
         <Services />
         <Plans />
         <Brands />
+        <About />
       </main>
       <Footer />
     </>

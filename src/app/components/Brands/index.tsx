@@ -50,6 +50,12 @@ export default function Brands() {
                     <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
                         4
                     </SwiperSlide>
+                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
+                        5
+                    </SwiperSlide>
+                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
+                        6
+                    </SwiperSlide>
                 </Swiper>
 
                 <Swiper
@@ -78,6 +84,12 @@ export default function Brands() {
                     </SwiperSlide>
                     <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
                         4
+                    </SwiperSlide>
+                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
+                        5
+                    </SwiperSlide>
+                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
+                        6
                     </SwiperSlide>
                 </Swiper>
 

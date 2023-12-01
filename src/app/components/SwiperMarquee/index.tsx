@@ -4,15 +4,25 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 interface SwiperMarqueeProps {
-    items: Array<string>
+    items?: Array<string>
 }
+
+const items = [
+    'Identidades Visuais',
+    'Lançamentos',
+    'Infoprodutos',
+    'Sites Institucionais',
+    'Dropshipping',
+    'Landing Pages',
+    'Redes Sociais',
+    'Impressão',
+];
 
 export default function SwiperMarquee(props: SwiperMarqueeProps) {
 
-
     return (
         <Swiper
-            className="bg-yellow-400 rotate-[-2deg]"
+            className="bg-yellow-400"
             spaceBetween={0}
             speed={2000}
             autoplay={{
@@ -27,8 +37,8 @@ export default function SwiperMarquee(props: SwiperMarqueeProps) {
         >
 
             {
-                props.items &&
-                props.items.map((item: string, idx: number) =>
+                items &&
+                items.map((item: string, idx: number) =>
                     <SwiperSlide className="" key={idx}>
                         <div className='inline-flex text-black text-28 font-bold py-2 uppercase justify-center'>
                             {item}
