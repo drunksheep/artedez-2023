@@ -1,4 +1,6 @@
 
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export interface PlanCardProps {
     title: string;
     subtitle: string;
@@ -65,9 +67,9 @@ export default function PlanCard(props: PlanCardProps) {
                 {
                     props.ctaString &&
                     <a href={props.ctaString} 
-                    className="bg-green-400 text-white border-4 border-white rounded-full min-h-[60px] text-24 text-center flex flex-row justify-center items-center">
+                    className="bg-green-400 text-white border-4 border-white rounded-full min-h-[60px] text-24 text-center flex flex-row justify-between items-center px-4">
                         Contratar esse plano!
-                        {/* <FontAwesomeIcon icon={fawhatsap} /> */}
+                        <FontAwesomeIcon className="text-white text-32" icon={faWhatsapp} />
                     </a>
                 }
             </div>

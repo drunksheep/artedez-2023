@@ -1,6 +1,5 @@
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from 'next/image';
 import Link from "next/link";
 
 export default function HeroText() {
@@ -24,10 +23,10 @@ export default function HeroText() {
                 <span>
                     Quero conhecer os planos!
                 </span>
-                <FontAwesomeIcon className="max-w-[20px]" size="2xs" icon={faArrowDown} />
+                <FontAwesomeIcon icon={faArrowDown} />
             </Link>
             <div className="flex flex-row gap-x-2 flex-nowrap justify-between align-center items-center">
-                <Image src="/images/clientes.png" alt="" width={209} height={52} />
+                <img src="/images/clientes.png" alt="" width={209} height={52} />
                 <p className="text-white font-bold text-22">+100 Clientes atendidos</p>
             </div>
         </div>

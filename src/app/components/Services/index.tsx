@@ -1,6 +1,5 @@
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 import SellingCard, { SellingCardProps } from "./SellingCard";
 import ServiceCard from "./ServiceCard";
@@ -14,34 +13,39 @@ export interface ServiceItem {
 
 export default function Services() {
 
-
     const mainServices: Array<ServiceItem> = [
         {
             title: 'LAYOUTS PARA',
-            subtitle: 'SITES E LPS'
+            subtitle: 'SITES E LPS',
+            bg: '/images/layouts.png'
         },
         {
             title: 'IDENTIDADES',
-            subtitle: 'VISUAIS'
+            subtitle: 'VISUAIS',
+            bg: '/images/identidades-visuais.png',
         },
         {
             title: 'REDES',
-            subtitle: 'SOCIAIS'
+            subtitle: 'SOCIAIS',
+            bg: '/images/redes-sociais.png',
         },
         {
             title: 'MATERIAIS PARA',
-            subtitle: 'IMPRESSÃO'
+            subtitle: 'IMPRESSÃO',
+            bg: '/images/materiais-impressao.png',
         }
     ];
 
     const secondaryServices: Array<ServiceItem> = [
         {
             title: 'CAMPANHAS',
-            subtitle: 'PUBLICITÁRIAS'
+            subtitle: 'PUBLICITÁRIAS',
+            bg: '/images/campanhas.png'
         },
         {
             title: 'MÍDIA',
             subtitle: 'PAGA',
+            bg: '/images/midia-paga.png'
         }
     ];
 
@@ -49,17 +53,20 @@ export default function Services() {
         {
             title: 'experiência',
             subtitle: 'CONSOLIDADA',
-            description: 'Com 20 anos de expertise, colaboramos com gigantes como Porto, Warren e The Town, criando histórias visuais extraordinárias'
+            description: 'Com 20 anos de expertise, colaboramos com gigantes como Porto, Warren e The Town, criando histórias visuais extraordinárias',
+            image: '/images/icone-estrela.png'
         },
         {
             title: 'foco total',
             subtitle: 'NO CLIENTE',
-            description: 'Aqui cada projeto é uma jornada centrada em você, onde suas necessidades se transformam em designs tangíveis e resultados para seu negócio'
+            description: 'Aqui cada projeto é uma jornada centrada em você, onde suas necessidades se transformam em designs tangíveis e resultados para seu negócio',
+            image: '/images/icone-alvo.png', 
         },
         {
             title: 'inovação que',
             subtitle: 'vende mais',
-            description: 'Utilizamos as mais modernas ferramentas de inteligência artificial, como MidJourney e ChatGPT, para auxiliar nossos time criativo, tornando nossos criativos únicos e exclusivos'
+            description: 'Utilizamos as mais modernas ferramentas de inteligência artificial, como MidJourney e ChatGPT, para auxiliar nossos time criativo, tornando nossos criativos únicos e exclusivos',
+            image: '/images/icone-cerebro.png',
         },
     ]
 
@@ -79,16 +86,16 @@ export default function Services() {
 
                     <p className="text-14 text-white flex flex-row gap-x-2 items-center">
                         Clique para conferir os projetos
-                        <Image src="/images/mouse.svg" width={20} height={20} alt="" />
+                        <img src="/images/mouse.svg" width={20} height={20} alt="" />
                     </p>
 
                 </div>
 
-                <div className="grid grid-cols-4 gap-x-[25px] mb-10">
+                <div className="grid grid-cols-4 gap-x-[40px] mb-10">
                     {
                         mainServices &&
                         mainServices.map((item: ServiceItem, idx: number) =>
-                            <ServiceCard title={item.title} subtitle={item.subtitle} key={idx} />
+                            <ServiceCard bg={item.bg} title={item.title} subtitle={item.subtitle} key={idx} />
                         )
                     }
                 </div>
@@ -97,7 +104,7 @@ export default function Services() {
                     {
                         secondaryServices &&
                         secondaryServices.map((item: ServiceItem, idx: number) =>
-                            <ServiceCardWide title={item.title} subtitle={item.subtitle} key={idx} />
+                            <ServiceCardWide bg={item.bg || ''} title={item.title} subtitle={item.subtitle} key={idx} />
                         )
                     }
                 </div>
@@ -113,7 +120,7 @@ export default function Services() {
                     {
                         SellingCards &&
                         SellingCards.map((item: SellingCardProps, idx: number) =>
-                            <SellingCard title={item.title} subtitle={item.subtitle} description={item.description} key={idx} />
+                            <SellingCard image={item.image || ''} title={item.title} subtitle={item.subtitle} description={item.description} key={idx} />
                         )
                     }
 

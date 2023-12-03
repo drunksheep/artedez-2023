@@ -35,7 +35,7 @@ export default function Plans() {
     ];
 
     return (
-        <section className="bg-black py-[130px]">
+        <section className="bg-black py-[130px]" id="plans">
             <div className="container">
                 <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
                     conheça

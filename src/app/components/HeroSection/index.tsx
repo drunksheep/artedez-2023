@@ -21,6 +21,8 @@ export default function HeroSection() {
                 <SwiperMarquee />
             </div>
 
+            <img className="hidden absolute left-[20px] bottom-[-300px] z-20 3xl:block" src="/images/photoshop.png" alt="" width={152} height={522} />
+
         </section>
     )
 }

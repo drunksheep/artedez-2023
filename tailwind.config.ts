@@ -46,10 +46,13 @@ const config: Config = {
         '50' : '50px',
         '56' : '56px',
       },
+      screens: {
+        '3xl' : '1700px'
+      },
       container: {
         screens: {
             xl: '1200px',
-            '2xl' : '1200px'
+            '2xl' : '1200px',
         }
       }
     },
