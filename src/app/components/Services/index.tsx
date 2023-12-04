@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Swiper, SwiperSlide } from "swiper/react";
+import MobileHelper from "../MobileHelper";
+import TitleHeadline from "../TitleHeadline";
 import MainServices from "./MainServices";
 import SellingCard from "./SellingCard";
 
@@ -12,18 +14,13 @@ import SellingCard from "./SellingCard";
 export default function Services() {
 
     return (
-        <section className="pt-[230px] lg:pt-[100px] relative pb-[130px]">
+        <section className="pt-[230px] lg:pt-[100px] relative pb-[50px] lg:pb-[130px]">
 
             <div className="container relative z-10">
 
                 <div className="lg:flex flex-row justify-between items-center">
 
-                    <h2 className="text-white font-bold font-nexa text-24 leading-[24px] lg:text-40 uppercase mb-[20px] lg:mb-[40px] lg:leading-[40px]">
-                        nossos serviços ajudam
-                        <span className="text-32 leading-[32px] lg:text-56 block lg:leading-[52px]">
-                            seu negócio a crescer
-                        </span>
-                    </h2>
+                    <TitleHeadline title="nossos serviços ajudam" subtitle="seu negócio a crescer" />
 
                     <p className="mb-[40px] lg:mb-0 text-14 text-white flex flex-row gap-x-2 items-center">
                         Clique para conferir os projetos
@@ -34,13 +31,7 @@ export default function Services() {
 
                 <MainServices />
 
-
-                <h2 className="text-white font-bold font-nexa text-24 lg:text-40 uppercase mb-6 lg:mb-[80px] leading-[24px] lg:leading-[40px] mt-[100px]">
-                    por que
-                    <span className="text-32 lg:text-56 block leading-[32px] lg:leading-[52px]">
-                        fechar com a gente?
-                    </span>
-                </h2>
+                <TitleHeadline title="conheça" subtitle="nossos diferenciais" />
 
                 <BrowserView>
                     {
@@ -69,14 +60,15 @@ export default function Services() {
                     {
                         SellingCards &&
                         <Swiper
-                        slidesPerView={1}
-                        centeredSlides
+                            slidesPerView={1}
+                            centeredSlides
+                            autoHeight
                         >
                             {
                                 SellingCards.map((item: SellingCardProps, idx: number) =>
                                     <SwiperSlide
-                                    className="pt-5 px-4" 
-                                    key={idx}>
+                                        className="pt-5 px-4"
+                                        key={idx}>
                                         <SellingCard
                                             image={item.image || ''}
                                             title={item.title}
@@ -92,6 +84,9 @@ export default function Services() {
 
                         </Swiper>
                     }
+                    <div className="mt-5">
+                        <MobileHelper />
+                    </div>
 
                 </MobileView>
 
@@ -99,7 +94,7 @@ export default function Services() {
 
             <div className="bg-gradient-to-t from-purple-400 to-transparent h-full w-full absolute top-0 left-0" />
 
-            <Link className="bg-pink-400 rounded-full font-bold w-full border-[4px] border-white text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400 absolute bottom-[-35px] left-0 right-0 m-auto max-w-[430px]" href="#" title="Conheça os planos">
+            <Link className="bg-pink-400 rounded-full font-bold w-full border-[4px] border-white text-18 lg:text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400 absolute bottom-[-35px] left-0 right-0 m-auto max-w-[320px] lg:max-w-[430px]" href="#plans" title="Conheça os planos">
                 <span>
                     Quanto preciso investir?
                 </span>

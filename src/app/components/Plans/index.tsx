@@ -1,6 +1,7 @@
 import { cardsContent } from "@/app/content/plans";
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Swiper, SwiperSlide } from "swiper/react";
+import MobileHelper from "../MobileHelper";
 import PlanCard, { PlanCardProps } from "./PlanCard";
 
 export default function Plans() {
@@ -41,11 +42,11 @@ export default function Plans() {
                 <MobileView>
 
                     <Swiper
-                     slidesPerView={1}
-                     centeredSlides
-                     autoHeight
-                     className="mb-10"
-                     >
+                        slidesPerView={1}
+                        centeredSlides
+                        autoHeight
+                        className="mb-10"
+                    >
                         {
                             cardsContent.map((item: PlanCardProps, idx: number) =>
                                 <SwiperSlide key={idx}>
@@ -65,6 +66,10 @@ export default function Plans() {
                         }
 
                     </Swiper>
+
+                    <div className="mb-10">
+                        <MobileHelper />
+                    </div>
 
                 </MobileView>
 

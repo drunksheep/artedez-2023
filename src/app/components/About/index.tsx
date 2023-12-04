@@ -2,6 +2,7 @@ import { swiperMarqueeItems } from '@/app/content/marquee';
 import { faBehance, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SwiperMarquee from "../SwiperMarquee";
+import TitleHeadline from '../TitleHeadline';
 
 export default function About() {
     return (
@@ -11,12 +12,7 @@ export default function About() {
                 <img src="/images/fernando.png" className='lg:left-[-50px] lg:top-[-50px] lg:absolute' alt="" width={680} height={970} />
 
                 <div className="lg:w-[500px] ml-auto">
-                    <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
-                        Quem está
-                        <span className="text-56 block leading-[52px]">
-                            por trás
-                        </span>
-                    </h2>
+                    <TitleHeadline title='Quem está' subtitle='por trás' />
                     <p className="text-white text-18 leading-[24px] mb-5">
                         Olá, sou Fernando Zani, fundador e mente criativa por trás da <strong>Arte Dez.</strong> Tenho 37 anos e trabalho com design desde os 17
                     </p>

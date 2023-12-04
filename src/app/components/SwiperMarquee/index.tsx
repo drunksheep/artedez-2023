@@ -16,7 +16,7 @@ export default function SwiperMarquee(props: SwiperMarqueeProps) {
         <Swiper
             className="bg-yellow-400"
             spaceBetween={0}
-            speed={2000}
+            speed={2300}
             autoplay={{
                 delay: 0,
                 disableOnInteraction: false,

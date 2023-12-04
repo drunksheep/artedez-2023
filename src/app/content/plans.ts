@@ -7,7 +7,7 @@ export const cardsContent: Array<PlanCardProps> = [
             description: '3 dias de criação para cada cota (esse plano não inclui cotas para identidades visuais ou layouts para sites e landing pages)',
             limit: '15 cotas',
             value: 'R$ 890,00',
-            ctaString: 'a',
+            ctaString: 'https://wa.me/5511964637406?text=Ol%C3%A1%2C+gostaria+de+contratar+o+plano+b%C3%A1sico+da+Arte+Dez+',
             doubleLimit: false,
         },
         {
@@ -17,7 +17,7 @@ export const cardsContent: Array<PlanCardProps> = [
             limit: '30 cotas',
             extraProd: '15 dias para criação',
             value: 'R$ 1590,00',
-            ctaString: 'b',
+            ctaString: 'https://wa.me/5511964637406?text=Ol%C3%A1%2C+gostaria+de+contratar+o+plano+intermedi%C3%A1rio+da+Arte+Dez+',
             doubleLimit: true
         },
         {
@@ -27,7 +27,7 @@ export const cardsContent: Array<PlanCardProps> = [
             limit: 'sem limite',
             extraProd: '10 dias para criação – até 2 cotas simultâneas',
             value: 'R$ 3590,00',
-            ctaString: 'c',
+            ctaString: 'https://wa.me/5511964637406?text=Ol%C3%A1%2C+gostaria+de+contratar+o+plano+intermedi%C3%A1rio+da+Arte+Dez+',
             doubleLimit: true,
         },
     ];

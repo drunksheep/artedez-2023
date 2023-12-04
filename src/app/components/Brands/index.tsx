@@ -2,6 +2,7 @@
 
 import { firstBrandCarouselContent, secondBrandCarouselContent } from '@/app/content/brand';
 import { BrandContent } from '@/app/types/brandContent';
+import { isMobile } from 'react-device-detect';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -43,7 +44,7 @@ export default function Brands() {
                         }}
                         loop
                         allowTouchMove={false}
-                        slidesPerView={3}
+                        slidesPerView={isMobile ? 2 : 3}
                         centeredSlides
                         modules={[Autoplay]}
                     >
@@ -78,7 +79,7 @@ export default function Brands() {
                         modules={[Autoplay]}
                     >
                         {
-                            secondBrandCarouselContent.reverse().map((item: BrandContent, idx: number) =>
+                            secondBrandCarouselContent.map((item: BrandContent, idx: number) =>
                                 <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl relative" key={idx}>
                                       <img src={item.src} alt={item.alt} width={item.width} height={item.height} 
                                     className='absolute left-0 right-0 m-auto top-[50%] translate-y-[-50%]' />

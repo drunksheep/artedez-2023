@@ -5,16 +5,16 @@ export const socialMediaURLs : Array<SocialMediaURLs> = [
     {
         name: 'Instagram',
         icon: faInstagram,
-        url: '' 
+        url: 'https://www.instagram.com/fezani' 
     },
     {
         name: 'Behance', 
         icon: faBehance, 
-        url: '',
+        url: 'https://www.linkedin.com/in/fezani/',
     },
     {
         name: 'Linkedin', 
         icon: faLinkedinIn, 
-        url: '',
+        url: 'https://www.behance.net/fezani',
     }
 ]
