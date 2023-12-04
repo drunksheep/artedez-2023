@@ -6,11 +6,9 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
-
 export default function Brands() {
     return (
-        <section className="relative max-w-[1920px]">
+        <section className="relative max-w-[1920px] mx-auto">
 
             <div className="container">
                 <div className="w-7/12 pt-14">
