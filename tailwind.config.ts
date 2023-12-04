@@ -54,6 +54,7 @@ const config: Config = {
       },
       container: {
         screens: {
+            md: '320px',
             xl: '1200px',
             '2xl' : '1200px',
         }

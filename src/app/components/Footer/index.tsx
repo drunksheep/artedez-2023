@@ -11,8 +11,8 @@ export default function Footer() {
                         <a className="font-nexa text-white text-12 font-bold transition-all duration-300 ease-in-out hover:text-pink-400" href="" target="_BLANK" rel="noopener noreferrer">LINKEDIN</a>
                     </div>
                 </div>
-                <div className='flex flex-row justify-between items-center pt-[12px] border-t-[1px] border-gray-400'>
-                    <p className="text-14 text-white">
+                <div className='lg:flex flex-row justify-between items-center pt-[12px] border-t-[1px] border-gray-400 text-center lg:text-left'>
+                    <p className="text-14 text-white mb-3 lg:mb-0">
                         <strong>Arte Dez Design Studio</strong> | Segunda a Sexta - 9h às 18h
                     </p>
                     <p className='text-14 text-white'>

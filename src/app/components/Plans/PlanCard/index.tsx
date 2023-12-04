@@ -14,7 +14,7 @@ export interface PlanCardProps {
 
 export default function PlanCard(props: PlanCardProps) {
     return (
-        <div className="border-4 border-white rounded-[52px] bg-transparent py-6 px-10 transition-all duration-400 ease-in-out hover:bg-white group grid grid-cols-1 content-between">
+        <div className="border-4 border-white rounded-[52px] bg-transparent p-5 lg:py-6 lg:px-10 transition-all duration-400 ease-in-out hover:bg-white group grid grid-cols-1 content-between">
             {
                 props.title &&
                 <h3 className="text-white group group-hover:text-black transition-all duration-400 ease-in-out font-nexa font-bold w-full mb-3 text-34 uppercase">

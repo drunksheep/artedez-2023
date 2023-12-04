@@ -1,5 +1,7 @@
 'use client';
 
+import { faqItems } from "@/app/content/faq";
+import { FaqItem } from "@/app/types/Faq";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -7,46 +9,20 @@ import { useState } from "react";
 
 export default function Faq() {
 
-    interface FaqItem {
-        question: string;
-        answer: string;
-    }
-
-    const faqItems: Array<FaqItem> = [
-        {
-            question: 'O que os pacotes não incluem? ',
-            answer: 'Nossos pacotes garantem a execução das demandas visuais acordadas em contrato, mas não incluem a criação de conteúdo ou planos estratégicos de comunicação da marca. A empresa contratante deve fornecer esses detalhes. Podemos também desenvolver essa parte, para isso solicite um plano personalizado através do nosso whatsapp.'
-        },
-        {
-            question: 'O que os pacotes não incluem? ',
-            answer: 'Nossos pacotes garantem a execução das demandas visuais acordadas em contrato, mas não incluem a criação de conteúdo ou planos estratégicos de comunicação da marca. A empresa contratante deve fornecer esses detalhes. Podemos também desenvolver essa parte, para isso solicite um plano personalizado através do nosso whatsapp.'
-        },
-        {
-            question: 'O que os pacotes não incluem? ',
-            answer: 'Nossos pacotes garantem a execução das demandas visuais acordadas em contrato, mas não incluem a criação de conteúdo ou planos estratégicos de comunicação da marca. A empresa contratante deve fornecer esses detalhes. Podemos também desenvolver essa parte, para isso solicite um plano personalizado através do nosso whatsapp.'
-        },
-        {
-            question: 'O que os pacotes não incluem? ',
-            answer: 'Nossos pacotes garantem a execução das demandas visuais acordadas em contrato, mas não incluem a criação de conteúdo ou planos estratégicos de comunicação da marca. A empresa contratante deve fornecer esses detalhes. Podemos também desenvolver essa parte, para isso solicite um plano personalizado através do nosso whatsapp.'
-        }
-    ];
-
-
-    const [openStates, setOpenStates] = useState<boolean[]>(faqItems.map(() => false));
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const toggleItem = (index: number) => {
-        setOpenStates(openStates.map((state, idx) => idx === index ? !state : state));
+        setOpenIndex(openIndex === index ? null : index);
     };
 
-
     return (
-        <section className="pt-[130px] pb-[120px] relative">
+        <section className="py-10 lg:pt-[130px] lg:pb-[120px] relative">
 
             <div className="container z-10 relative ">
 
-                <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[60px] leading-[40px]">
+                <h2 className="text-white font-bold font-nexa text-24 lg:text-40 uppercase mb-6 lg:mb-[60px] lg:leading-[40px]">
                     ficou com alguma dúvida?
-                    <span className="text-56 block leading-[52px]">
+                    <span className="text-32 lg:text-56 block lg:leading-[52px]">
                         confira nosso faq
                     </span>
                 </h2>
@@ -62,10 +38,10 @@ export default function Faq() {
                                             {item.question}
                                         </h3>
                                         <div className={`min-h-[40px] min-w-[40px] bg-pink-400 rounded-full text-24 text-white font-bold`}>
-                                            {openStates[idx] ? '-' : '+'}
+                                        {openIndex === idx ? '-' : '+'}
                                         </div>
                                     </button>
-                                    <div className={`bg-white pt-[20px] pb-[30px] px-[15px] ${openStates[idx] ? '' : 'hidden'}`}>
+                                    <div className={`bg-white pt-[20px] pb-[30px] px-[15px]  ${openIndex === idx ? '' : 'hidden'}`}>
                                         <p className="text-black text-14 leading-[20px]">
                                             {item.answer}
                                         </p>
