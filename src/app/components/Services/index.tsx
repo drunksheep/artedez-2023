@@ -1,67 +1,17 @@
+import { SellingCards } from "@/app/content/sellingCard";
+import { secondaryServices } from "@/app/content/services";
+import { SellingCardProps } from "@/app/types/sellingCard";
+import { ServiceItem } from "@/app/types/serviceItem";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
-import SellingCard, { SellingCardProps } from "./SellingCard";
-import ServiceCard from "./ServiceCard";
+import MainServices from "./MainServices";
+import SellingCard from "./SellingCard";
 import ServiceCardWide from "./ServiceCardWide";
 
-export interface ServiceItem {
-    title: string;
-    subtitle: string;
-    bg?: string;
-}
 
 export default function Services() {
 
-
-    const mainServices: Array<ServiceItem> = [
-        {
-            title: 'LAYOUTS PARA',
-            subtitle: 'SITES E LPS'
-        },
-        {
-            title: 'IDENTIDADES',
-            subtitle: 'VISUAIS'
-        },
-        {
-            title: 'REDES',
-            subtitle: 'SOCIAIS'
-        },
-        {
-            title: 'MATERIAIS PARA',
-            subtitle: 'IMPRESSÃO'
-        }
-    ];
-
-    const secondaryServices: Array<ServiceItem> = [
-        {
-            title: 'CAMPANHAS',
-            subtitle: 'PUBLICITÁRIAS'
-        },
-        {
-            title: 'MÍDIA',
-            subtitle: 'PAGA',
-        }
-    ];
-
-    const SellingCards: Array<SellingCardProps> = [
-        {
-            title: 'experiência',
-            subtitle: 'CONSOLIDADA',
-            description: 'Com 20 anos de expertise, colaboramos com gigantes como Porto, Warren e The Town, criando histórias visuais extraordinárias'
-        },
-        {
-            title: 'foco total',
-            subtitle: 'NO CLIENTE',
-            description: 'Aqui cada projeto é uma jornada centrada em você, onde suas necessidades se transformam em designs tangíveis e resultados para seu negócio'
-        },
-        {
-            title: 'inovação que',
-            subtitle: 'vende mais',
-            description: 'Utilizamos as mais modernas ferramentas de inteligência artificial, como MidJourney e ChatGPT, para auxiliar nossos time criativo, tornando nossos criativos únicos e exclusivos'
-        },
-    ]
 
     return (
         <section className="pt-[100px] relative pb-[130px]">
@@ -79,25 +29,18 @@ export default function Services() {
 
                     <p className="text-14 text-white flex flex-row gap-x-2 items-center">
                         Clique para conferir os projetos
-                        <Image src="/images/mouse.svg" width={20} height={20} alt="" />
+                        <img src="/images/mouse.svg" width={20} height={20} alt="" />
                     </p>
 
                 </div>
 
-                <div className="grid grid-cols-4 gap-x-[25px] mb-10">
-                    {
-                        mainServices &&
-                        mainServices.map((item: ServiceItem, idx: number) =>
-                            <ServiceCard title={item.title} subtitle={item.subtitle} key={idx} />
-                        )
-                    }
-                </div>
+                <MainServices />
 
-                <div className="grid grid-cols-2 gap-x-[25px]">
+                <div className="grid grid-cols-2 gap-x-[40px]">
                     {
                         secondaryServices &&
                         secondaryServices.map((item: ServiceItem, idx: number) =>
-                            <ServiceCardWide title={item.title} subtitle={item.subtitle} key={idx} />
+                            <ServiceCardWide bg={item.bg || ''} title={item.title} subtitle={item.subtitle} key={idx} />
                         )
                     }
                 </div>
@@ -113,11 +56,17 @@ export default function Services() {
                     {
                         SellingCards &&
                         SellingCards.map((item: SellingCardProps, idx: number) =>
-                            <SellingCard title={item.title} subtitle={item.subtitle} description={item.description} key={idx} />
+                            <SellingCard
+                                image={item.image || ''}
+                                title={item.title}
+                                subtitle={item.subtitle}
+                                description={item.description}
+                                width={item.width}
+                                height={item.height}
+                                positioning={item.positioning}
+                                key={idx} />
                         )
                     }
-
-
                 </div>
 
             </div>

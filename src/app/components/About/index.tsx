@@ -1,10 +1,13 @@
+import { swiperMarqueeItems } from '@/app/content/marquee';
+import { faBehance, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SwiperMarquee from "../SwiperMarquee";
 
 export default function About() {
     return (
         <section className="pt-[200px] relative pb-[150px]">
-            <div className="container">
+            <div className="container relative z-10">
+                <img src="/images/fernando.png" className='left-[-50px] top-[-50px] absolute' alt="" width={680} height={970} />
                 <div className="w-[500px] ml-auto">
                     <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
                         Quem está
@@ -29,18 +32,18 @@ export default function About() {
                             Redes sociais
                         </p>
                         <div className="flex flex-row items-center justify-between w-[100px]">
-                            <FontAwesomeIcon color="white" className="text-white" icon={['fab', 'instagram']} />
-                            <FontAwesomeIcon color="white" className="text-white" icon={['fab', 'linkedin']} />
-                            <FontAwesomeIcon color="white" className="text-white" icon={['fab', 'behance']} />
+                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faInstagram} /></a>
+                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faLinkedinIn} /></a>
+                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faBehance} /></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="absolute w-full left-0 bottom-0 rotate-[2deg]">
-                <SwiperMarquee />
+            <div className="absolute w-full left-0 bottom-0 rotate-[2deg] z-10">
+                <SwiperMarquee items={swiperMarqueeItems} />
             </div>
-            
+        
         </section>
     )
 }

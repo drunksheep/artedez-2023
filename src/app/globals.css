@@ -24,10 +24,39 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+    overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 
 .swiper-wrapper{
   -webkit-transition-timing-function:linear!important;
   transition-timing-function:linear!important; 
+}
+
+@keyframes logoSpin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: logoSpin 30s linear infinite;
+}
+
+.site-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.site-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,.1);
+  border-radius: 3px;
 }
