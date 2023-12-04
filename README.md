@@ -1,3 +1,21 @@
+# Artedez - 2023
+
+Repositório para controle da landing page.
+
+
+### Especificações técnicas
+
+Desenvolvido em um ambiente WSL Ubuntu, utilizando: 
+
+- Nodejs: 18.17.1
+- Next.js: 14.0.3
+
+Para o deploy, o processo envolve o build comum do app e upload no FTP, não precisa de servidor node e usa geração estática.
+
+----------
+<br>
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
