@@ -1,33 +1,31 @@
 import { SellingCards } from "@/app/content/sellingCard";
-import { secondaryServices } from "@/app/content/services";
 import { SellingCardProps } from "@/app/types/sellingCard";
-import { ServiceItem } from "@/app/types/serviceItem";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { BrowserView, MobileView } from 'react-device-detect';
+import { Swiper, SwiperSlide } from "swiper/react";
 import MainServices from "./MainServices";
 import SellingCard from "./SellingCard";
-import ServiceCardWide from "./ServiceCardWide";
 
 
 export default function Services() {
 
-
     return (
-        <section className="pt-[100px] relative pb-[130px]">
+        <section className="pt-[230px] lg:pt-[100px] relative pb-[130px]">
 
             <div className="container relative z-10">
 
-                <div className="flex flex-row justify-between items-center">
+                <div className="lg:flex flex-row justify-between items-center">
 
-                    <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
+                    <h2 className="text-white font-bold font-nexa text-24 leading-[24px] lg:text-40 uppercase mb-[20px] lg:mb-[40px] lg:leading-[40px]">
                         nossos serviços ajudam
-                        <span className="text-56 block leading-[52px]">
+                        <span className="text-32 leading-[32px] lg:text-56 block lg:leading-[52px]">
                             seu negócio a crescer
                         </span>
                     </h2>
 
-                    <p className="text-14 text-white flex flex-row gap-x-2 items-center">
+                    <p className="mb-[40px] lg:mb-0 text-14 text-white flex flex-row gap-x-2 items-center">
                         Clique para conferir os projetos
                         <img src="/images/mouse.svg" width={20} height={20} alt="" />
                     </p>
@@ -36,38 +34,66 @@ export default function Services() {
 
                 <MainServices />
 
-                <div className="grid grid-cols-2 gap-x-[40px]">
-                    {
-                        secondaryServices &&
-                        secondaryServices.map((item: ServiceItem, idx: number) =>
-                            <ServiceCardWide bg={item.bg || ''} title={item.title} subtitle={item.subtitle} key={idx} />
-                        )
-                    }
-                </div>
 
-                <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[80px] leading-[40px] mt-[100px]">
-                    porque
-                    <span className="text-56 block leading-[52px]">
+                <h2 className="text-white font-bold font-nexa text-24 lg:text-40 uppercase mb-6 lg:mb-[80px] leading-[24px] lg:leading-[40px] mt-[100px]">
+                    por que
+                    <span className="text-32 lg:text-56 block leading-[32px] lg:leading-[52px]">
                         fechar com a gente?
                     </span>
                 </h2>
 
-                <div className="grid grid-cols-3 gap-x-[60px]">
+                <BrowserView>
                     {
                         SellingCards &&
-                        SellingCards.map((item: SellingCardProps, idx: number) =>
-                            <SellingCard
-                                image={item.image || ''}
-                                title={item.title}
-                                subtitle={item.subtitle}
-                                description={item.description}
-                                width={item.width}
-                                height={item.height}
-                                positioning={item.positioning}
-                                key={idx} />
-                        )
+                        <div className="lg:grid lg:grid-cols-3 lg:gap-x-[60px]">
+                            {
+                                SellingCards.map((item: SellingCardProps, idx: number) =>
+                                    <SellingCard
+                                        image={item.image || ''}
+                                        title={item.title}
+                                        subtitle={item.subtitle}
+                                        description={item.description}
+                                        width={item.width}
+                                        height={item.height}
+                                        positioning={item.positioning}
+                                        key={idx} />
+                                )
+                            }
+                        </div>
                     }
-                </div>
+
+
+                </BrowserView>
+
+                <MobileView>
+                    {
+                        SellingCards &&
+                        <Swiper
+                        slidesPerView={1}
+                        centeredSlides
+                        >
+                            {
+                                SellingCards.map((item: SellingCardProps, idx: number) =>
+                                    <SwiperSlide
+                                    className="pt-5 px-4" 
+                                    key={idx}>
+                                        <SellingCard
+                                            image={item.image || ''}
+                                            title={item.title}
+                                            subtitle={item.subtitle}
+                                            description={item.description}
+                                            width={item.width}
+                                            height={item.height}
+                                            positioning={item.positioning}
+                                            key={idx} />
+                                    </SwiperSlide>
+                                )
+                            }
+
+                        </Swiper>
+                    }
+
+                </MobileView>
 
             </div>
 

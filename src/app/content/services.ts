@@ -26,6 +26,16 @@ export const mainServices: Array<ServiceItem> = [
         title: 'MATERIAIS PARA',
         subtitle: 'IMPRESSÃO',
         bg: '/images/materiais-impressao.png',
+    },
+    {
+        title: 'CAMPANHAS',
+        subtitle: 'PUBLICITÁRIAS',
+        bg: '/images/campanhas.png'
+    },
+    {
+        title: 'MÍDIA',
+        subtitle: 'PAGA',
+        bg: '/images/midia-paga.png'
     }
 ];
 
@@ -86,18 +96,3 @@ export const social: Array<ImageBasic> = [
         alt: 'Warren'
     },
 ]
-
-
-
-export const secondaryServices: Array<ServiceItem> = [
-    {
-        title: 'CAMPANHAS',
-        subtitle: 'PUBLICITÁRIAS',
-        bg: '/images/campanhas.png'
-    },
-    {
-        title: 'MÍDIA',
-        subtitle: 'PAGA',
-        bg: '/images/midia-paga.png'
-    }
-];

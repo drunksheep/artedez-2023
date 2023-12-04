@@ -8,24 +8,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Brands() {
     return (
-        <section className="relative max-w-[1920px] mx-auto">
+        <section className="relative lg:max-w-[1920px] mx-auto">
 
             <div className="container">
-                <div className="w-7/12 pt-14">
-                    <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
+
+                <div className="lg:w-7/12 lg:pt-14">
+
+                    <h2 className="text-white font-bold font-nexa text-24 lg:text-40 uppercase mb-5 lg:mb-[40px] leading-[28px] lg:leading-[40px]">
                         marcas que confiaram
-                        <span className="text-56 block leading-[52px]">
+                        <span className="text-32 lg:text-56 block leading-[32px] lg:leading-[52px]">
                             no nosso trabalho
                         </span>
                     </h2>
-                    <p className="text-white text-18 leading-[24px] w-[80%]">
+
+                    <p className="text-white lg:text-18 lg:leading-[24px] lg:w-[80%]">
                         <strong>Junte-se às grandes empresas que já trabalharam conosco</strong> <br /> Confira algumas das marcas que escolheram ter grandes resultados através dos nossos serviços
                     </p>
+
                 </div>
             </div>
 
-            <div className="absolute right-0 top-0 w-[640px] 3xl:w-[840px]">
-                <div className="absolute w-[300px] top-0 h-full z-10 bg-gradient-to-r from-black via-black/50 to-transparent" />
+            <div className="absolute lg:right-0 top-[280px] lg:top-0 w-full lg:w-[640px] 3xl:w-[840px]">
+
+                <div className="hidden lg:block absolute w-[300px] top-0 h-full z-10 lg:bg-gradient-to-r lg:from-black lg:via-black/50 lg:to-transparent" />
+
                 {
                     firstBrandCarouselContent &&
                     <Swiper
@@ -83,6 +89,8 @@ export default function Brands() {
                     </Swiper>
                 }
             </div>
+
+
         </section >
     )
 }

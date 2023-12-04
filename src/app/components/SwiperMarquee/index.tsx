@@ -1,5 +1,6 @@
 import { faBolt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { isMobile } from 'react-device-detect';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -22,7 +23,7 @@ export default function SwiperMarquee(props: SwiperMarqueeProps) {
             }}
             loop
             allowTouchMove={false}
-            slidesPerView={4}
+            slidesPerView={isMobile ? 1 : 4}
             centeredSlides
             modules={[Autoplay]}
         >

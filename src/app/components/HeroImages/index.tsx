@@ -4,7 +4,7 @@ export default function HeroImages() {
         <div className="">
 
 
-            <div className="border-2 border-white relative h-[520px] w-[520px] ml-auto">
+            <div className="border-2 border-white relative w-[300px] h-[300px] lg:h-[520px] lg:w-[520px] mx-auto lg:ml-auto mt-20 lg:mt-0">
 
                 {/* squares */}
                 <div className="absolute top-[-10px] left-[-10px] h-[20px] w-[20px] bg-white"></div>
@@ -13,10 +13,10 @@ export default function HeroImages() {
                 <div className="absolute bottom-[-10px] left-[-10px] h-[20px] w-[20px] bg-white"></div>
 
                 {/* logo middle */}
-                <img className='absolute left-0 right-0 m-auto top-[50%] translate-y-[-50%]' src="/images/logo-centro-topo.svg" alt="" width={295} height={295} />
+                <img className='absolute left-0 right-0 m-auto top-[50%] translate-y-[-50%] max-w-[60%] lg:max-w-full' src="/images/logo-centro-topo.svg" alt="" width={295} height={295} />
 
                 {/* logo spinning letters */}
-                <img className='spin absolute left-0 right-0 m-auto top-[42px]' src="/images/logo-circular-topo.svg" alt="" width={430} height={430} />
+                <img className='spin absolute left-0 right-0 m-auto lg:top-[42px] top-[15px] max-w-[90%]' src="/images/logo-circular-topo.svg" alt="" width={430} height={430} />
 
                 {/* glow right */}
                 <img className='absolute top-[120px] translate-y-[-50%] right-[-113px] z-10' src="/images/brilho-topo.png" alt="" width={225} height={568} />

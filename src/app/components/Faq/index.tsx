@@ -9,22 +9,20 @@ import { useState } from "react";
 
 export default function Faq() {
 
-    // Initialize state with 0 to have the first item open by default
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const toggleItem = (index: number) => {
-        // If the same item is clicked, close it, otherwise open the clicked item
         setOpenIndex(openIndex === index ? null : index);
     };
 
     return (
-        <section className="pt-[130px] pb-[120px] relative">
+        <section className="py-10 lg:pt-[130px] lg:pb-[120px] relative">
 
             <div className="container z-10 relative ">
 
-                <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[60px] leading-[40px]">
+                <h2 className="text-white font-bold font-nexa text-24 lg:text-40 uppercase mb-6 lg:mb-[60px] lg:leading-[40px]">
                     ficou com alguma dúvida?
-                    <span className="text-56 block leading-[52px]">
+                    <span className="text-32 lg:text-56 block lg:leading-[52px]">
                         confira nosso faq
                     </span>
                 </h2>

@@ -12,11 +12,11 @@ export default function HeroSection() {
     const val = useTransform(scrollYProgress, [0, .5], [0, -500])
 
     return (
-        <section className="hero pt-[170px] justify-between relative pb-[170px]">
+        <section className="hero pt-[80px] lg:pt-[170px] lg:justify-between lg:pb-[170px] relative ">
 
             <div className="bg-gradient-to-b from-purple-400 to-transparent h-full w-full absolute top-0 left-0" />
 
-            <div className="container grid grid-cols-2 relative z-10">
+            <div className="container lg:grid lg:grid-cols-2 relative z-10">
 
                 <HeroText />
 
@@ -24,7 +24,7 @@ export default function HeroSection() {
 
             </div>
 
-            <div className="absolute w-full left-0 bottom-0 rotate-[-2deg]">
+            <div className="absolute w-full left-0 bottom-[-150px] lg:bottom-0 rotate-[-2deg]">
                 <SwiperMarquee items={swiperMarqueeItems} />
             </div>
 

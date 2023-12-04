@@ -5,10 +5,12 @@ import SwiperMarquee from "../SwiperMarquee";
 
 export default function About() {
     return (
-        <section className="pt-[200px] relative pb-[150px]">
+        <section className="pt-[420px] lg:pt-[200px] relative pb-[150px]">
             <div className="container relative z-10">
-                <img src="/images/fernando.png" className='left-[-50px] top-[-50px] absolute' alt="" width={680} height={970} />
-                <div className="w-[500px] ml-auto">
+
+                <img src="/images/fernando.png" className='lg:left-[-50px] lg:top-[-50px] lg:absolute' alt="" width={680} height={970} />
+
+                <div className="lg:w-[500px] ml-auto">
                     <h2 className="text-white font-bold font-nexa text-40 uppercase mb-[40px] leading-[40px]">
                         Quem está
                         <span className="text-56 block leading-[52px]">
