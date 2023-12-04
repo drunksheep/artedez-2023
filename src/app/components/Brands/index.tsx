@@ -1,12 +1,16 @@
 'use client';
 
+import { firstBrandCarouselContent, secondBrandCarouselContent } from '@/app/content/brand';
+import { BrandContent } from '@/app/types/brandContent';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
+
 export default function Brands() {
     return (
-        <section className="relative">
+        <section className="relative max-w-[1920px]">
 
             <div className="container">
                 <div className="w-7/12 pt-14">
@@ -22,78 +26,65 @@ export default function Brands() {
                 </div>
             </div>
 
-            <div className="absolute right-0 top-0 w-[840px]">
+            <div className="absolute right-0 top-0 w-[640px] 3xl:w-[840px]">
                 <div className="absolute w-[300px] top-0 h-full z-10 bg-gradient-to-r from-black via-black/50 to-transparent" />
+                {
+                    firstBrandCarouselContent &&
+                    <Swiper
+                        spaceBetween={40}
+                        speed={3000}
+                        autoplay={{
+                            delay: 0,
+                            disableOnInteraction: false,
+                        }}
+                        loop
+                        allowTouchMove={false}
+                        slidesPerView={3}
+                        centeredSlides
+                        modules={[Autoplay]}
+                    >
+                        {
+                            firstBrandCarouselContent.map((item: BrandContent, idx: number) =>
+                                <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl relative" key={idx}>
+                                    <img src={item.src} alt={item.alt} width={item.width} height={item.height} 
+                                    className='absolute left-0 right-0 m-auto top-[50%] translate-y-[-50%]' />
+                                </SwiperSlide>
+                            )
+                        }
+                    </Swiper>
+                }
 
-                <Swiper
-                    spaceBetween={40}
-                    speed={3000}
-                    autoplay={{
-                        delay: 0,
-                        disableOnInteraction: false,
-                    }}
-                    loop
-                    allowTouchMove={false}
-                    slidesPerView={4}
-                    centeredSlides
-                    modules={[Autoplay]}
-                >
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        1
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        2
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        3
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        4
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        5
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        6
-                    </SwiperSlide>
-                </Swiper>
+                {/* reverse */}
+                
+                {
+                    secondBrandCarouselContent &&
+                    <Swiper
+                        className='mt-10'
+                        spaceBetween={40}
+                        speed={3000}
+                        autoplay={{
+                            delay: 0,
+                            disableOnInteraction: false,
+                            reverseDirection: true,
+                        }}
+                        loop
+                        allowTouchMove={false}
+                        slidesPerView={3}
+                        centeredSlides
+                        modules={[Autoplay]}
+                    >
+                        {
+                            secondBrandCarouselContent.reverse().map((item: BrandContent, idx: number) =>
+                                <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl relative" key={idx}>
+                                      <img src={item.src} alt={item.alt} width={item.width} height={item.height} 
+                                    className='absolute left-0 right-0 m-auto top-[50%] translate-y-[-50%]' />
+                                </SwiperSlide>
+                            )
+                        }
 
-                <Swiper
-                    className='mt-10'
-                    spaceBetween={40}
-                    speed={3000}
-                    autoplay={{
-                        delay: 0,
-                        disableOnInteraction: false,
-                        reverseDirection: true,
-                    }}
-                    loop
-                    allowTouchMove={false}
-                    slidesPerView={4}
-                    centeredSlides
-                    modules={[Autoplay]}
-                >
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        1
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        2
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        3
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        4
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        5
-                    </SwiperSlide>
-                    <SwiperSlide className="bg-white min-w-[250px] min-h-[150px] rounded-2xl">
-                        6
-                    </SwiperSlide>
-                </Swiper>
-
+                    </Swiper>
+                }
             </div>
-        </section>
+        </section >
     )
 }

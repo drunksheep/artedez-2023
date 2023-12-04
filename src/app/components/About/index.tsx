@@ -1,3 +1,4 @@
+import { swiperMarqueeItems } from '@/app/content/marquee';
 import { faBehance, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SwiperMarquee from "../SwiperMarquee";
@@ -40,7 +41,7 @@ export default function About() {
             </div>
 
             <div className="absolute w-full left-0 bottom-0 rotate-[2deg] z-10">
-                <SwiperMarquee />
+                <SwiperMarquee items={swiperMarqueeItems} />
             </div>
         
         </section>

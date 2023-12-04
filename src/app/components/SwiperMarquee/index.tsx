@@ -9,24 +9,13 @@ interface SwiperMarqueeProps {
     items?: Array<string>
 }
 
-const items = [
-    'Identidades Visuais',
-    'Lançamentos',
-    'Infoprodutos',
-    'Sites Institucionais',
-    'Dropshipping',
-    'Landing Pages',
-    'Redes Sociais',
-    'Impressão',
-];
-
 export default function SwiperMarquee(props: SwiperMarqueeProps) {
 
     return (
         <Swiper
             className="bg-yellow-400"
             spaceBetween={0}
-            speed={1700}
+            speed={2000}
             autoplay={{
                 delay: 0,
                 disableOnInteraction: false,
@@ -39,9 +28,9 @@ export default function SwiperMarquee(props: SwiperMarqueeProps) {
         >
 
             {
-                items &&
-                items.map((item: string, idx: number) =>
-                    <SwiperSlide className="width-[300px] flex text-black text-28 font-bold py-2 px-4 uppercase justify-center items-center relative text-center" key={idx}>
+                props.items &&
+                props.items.map((item: string, idx: number) =>
+                    <SwiperSlide className="width-[200px] flex text-black text-28 font-bold py-2 px-4 uppercase justify-center items-center relative text-center" key={idx}>
                         <FontAwesomeIcon className='text-white absolute left-0 top-[50%] translate-y-[-50%]' icon={faBolt} />
                         {item}
                     </SwiperSlide>

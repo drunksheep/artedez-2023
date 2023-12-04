@@ -1,9 +1,9 @@
-import { ServiceItem } from "..";
+import { ServiceItem } from "@/app/types/serviceItem";
 
 
 export default function ServiceCardWide(props: ServiceItem) {
     return (
-        <div className="min-h-[85px] border-2 border-transparent flex px-5 py-5 rounded-[18px] overflow-hidden relative hover:border-white transition-all duration-300 ease-in-out">
+        <div className="min-h-[85px] border-4 border-transparent flex px-5 py-5 rounded-[18px] overflow-hidden relative hover:border-white transition-all duration-300 ease-in-out">
             {
                 props.bg &&
                 <img className="absolute top-0 left-0 w-full h-full" src={props.bg || ''} alt={props.title || ''} width={290} height={500} />
