@@ -10,6 +10,8 @@ export interface PlanCardProps {
     value: string;
     ctaString: string;
     doubleLimit?: boolean;
+    limit2?: string;
+    usesLimit2?: boolean;
 }
 
 export default function PlanCard(props: PlanCardProps) {
@@ -51,15 +53,21 @@ export default function PlanCard(props: PlanCardProps) {
             {
                 props.doubleLimit &&
                 <p className="text-18 text-white group group-hover:text-black transition-all duration-400 ease-in-out mb-4">
-                    <b>Limite mensal:</b> {props.limit} cotas
+                    <b>Limite mensal:</b> {props.limit}
                 </p>
             }
-            <div className="align-self-end mt-8">
+            {
+                props.usesLimit2 &&
+                <p className="text-18 text-white group group-hover:text-black transition-all duration-400 ease-in-out mb-4">
+                    <b>Limite mensal:</b> {props.limit2}
+                </p>
+            }
+            <div className="align-self-end mt-5 lg:mt-8">
                 {
                     props.value &&
-                    <p className="text-18 text-white group group-hover:text-black transition-all duration-400 ease-in-out leading-[40px] mb-10">
+                    <p className="text-14 lg:text-18 text-white group group-hover:text-black transition-all duration-400 ease-in-out leading-[40px] mb-10">
                         <b>Valor Mensal:</b> <br />
-                        <span className="text-50 font-bold font-nexa">
+                        <span className="text-32 lg:text-50 font-bold font-nexa">
                             {props.value}
                         </span>
                     </p>

@@ -4,4 +4,5 @@ export interface ServiceItem {
     bg?: string;
     hasModal?: boolean;
     category?: string;
+    mobileBg?: string;
 }

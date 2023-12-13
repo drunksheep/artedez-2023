@@ -1,5 +1,7 @@
+import { socialMediaURLs } from '@/app/content/general';
 import { swiperMarqueeItems } from '@/app/content/marquee';
-import { faBehance, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { SocialMediaURLs } from '@/app/types/socialMedia';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SwiperMarquee from "../SwiperMarquee";
 import TitleHeadline from '../TitleHeadline';
@@ -9,7 +11,7 @@ export default function About() {
         <section className="pt-[420px] lg:pt-[200px] relative pb-[150px]">
             <div className="container relative z-10">
 
-                <img src="/images/fernando.png" className='lg:left-[-50px] lg:top-[-50px] lg:absolute' alt="" width={680} height={970} />
+                <img src="/images/fernando.png" className='mb-10 lg:mb-0 lg:left-[-50px] lg:top-[-50px] lg:absolute lg:max-w-[600px]' alt="" width={680} height={970} />
 
                 <div className="lg:w-[500px] ml-auto">
                     <TitleHeadline title='Quem está' subtitle='por trás' />
@@ -25,14 +27,18 @@ export default function About() {
                     <p className="text-white text-18 leading-[24px] mb-10">
                         Hoje, como fundador da <strong>Arte Dez</strong>, tenho convicção de que o design não é apenas sobre estética, mas sobre contar histórias, criar conexões e o mais importante, <strong>gerar resultados</strong>
                     </p>
-                    <div className="border-4 border-white rounded-xl flex flex-row justify-around items-center max-w-[400px] min-h-[60px]">
+                    <div className="border-4 border-white rounded-full flex flex-row justify-around items-center max-w-[400px] min-h-[60px]">
                         <p className="text-24 text-white">
                             Redes sociais
                         </p>
                         <div className="flex flex-row items-center justify-between w-[100px]">
-                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faInstagram} /></a>
-                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faLinkedinIn} /></a>
-                            <a href=""><FontAwesomeIcon className="text-white text-24" icon={faBehance} /></a>
+                            {
+                                socialMediaURLs.map((item: SocialMediaURLs, idx: number) =>
+                                    <a href={item.url} target="_BLANK" rel="noopener noreferrer" key={idx}>
+                                        <FontAwesomeIcon className="text-white text-24" icon={item.icon || faInstagram} />
+                                    </a>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
@@ -41,7 +47,7 @@ export default function About() {
             <div className="absolute w-full left-0 bottom-0 rotate-[2deg] z-10">
                 <SwiperMarquee items={swiperMarqueeItems} />
             </div>
-        
+
         </section>
     )
 }

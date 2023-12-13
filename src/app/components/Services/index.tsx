@@ -18,14 +18,16 @@ export default function Services() {
 
             <div className="container relative z-10">
 
-                <div className="lg:flex flex-row justify-between items-center">
+                <div className="lg:flex flex-row justify-between items-center mb-10 lg:mb-0">
 
                     <TitleHeadline title="nossos serviços ajudam" subtitle="seu negócio a crescer" />
 
-                    <p className="mb-[40px] lg:mb-0 text-14 text-white flex flex-row gap-x-2 items-center">
-                        Clique para conferir os projetos
-                        <img src="/images/mouse.svg" width={20} height={20} alt="" />
-                    </p>
+                    <BrowserView>
+                        <p className="mb-[40px] lg:mb-0 text-14 text-white flex flex-row gap-x-2 items-center">
+                            Clique para conferir os projetos
+                            <img src="/images/mouse.svg" width={20} height={20} alt="" />
+                        </p>
+                    </BrowserView>
 
                 </div>
 

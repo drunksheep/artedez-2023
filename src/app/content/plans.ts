@@ -18,7 +18,9 @@ export const cardsContent: Array<PlanCardProps> = [
             extraProd: '15 dias para criação',
             value: 'R$ 1590,00',
             ctaString: 'https://wa.me/5511964637406?text=Ol%C3%A1%2C+gostaria+de+contratar+o+plano+intermedi%C3%A1rio+da+Arte+Dez+',
-            doubleLimit: true
+            doubleLimit: false,
+            limit2: '8 cotas',
+            usesLimit2: true,
         },
         {
             title: 'full',

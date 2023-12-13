@@ -2,6 +2,10 @@ import { ImageBasic } from "../types/image";
 import { ServiceItem } from "../types/serviceItem";
 
 export const portfolioURL = '/images/portfolio';
+export const sitesURL = '/images/sites'
+export const logosURL = '/images/logos'
+export const socialURL = '/images/social';
+export const marketingURL = '/images/marketing'
 
 export const mainServices: Array<ServiceItem> = [
     {
@@ -32,13 +36,15 @@ export const mainServices: Array<ServiceItem> = [
         title: 'CAMPANHAS',
         subtitle: 'PUBLICITÁRIAS',
         bg: '/images/campanhas.png',
-        category: 'campaigns'
+        category: 'campaigns',
+        mobileBg: '/images/campanhas-mob.png',
     },
     {
         title: 'MÍDIA',
         subtitle: 'PAGA',
         bg: '/images/midia-paga.png',
-        category: 'paid'
+        category: 'paid',
+        mobileBg: '/images/midia-mob.png',
     }
 ];
 
@@ -218,7 +224,7 @@ export const paid: Array<ImageBasic> = [
     },
 ];
 
-export const campaigns : Array<ImageBasic> = [
+export const campaigns: Array<ImageBasic> = [
     {
         src: `${portfolioURL}/campaigns/portobank.jpg`,
         alt: 'Portobank'
@@ -250,5 +256,145 @@ export const campaigns : Array<ImageBasic> = [
     {
         src: `${portfolioURL}/campaigns/bonus-portobank.jpg`,
         alt: 'Bônus Portobank'
+    },
+]
+
+export const newWebContent : Array<ImageBasic> = [
+    {
+        src: `${sitesURL}/01.jpg`,
+        alt: `Kiwi Pilates`
+    },
+    {
+        src: `${sitesURL}/02.jpg`,
+        alt: `Roll Music`
+    },
+    {
+        src: `${sitesURL}/03.jpg`,
+        alt: `Wendell Uguetto`
+    },
+    {
+        src: `${sitesURL}/04.jpg`,
+        alt: `Carneiro e Cagnacci`
+    },
+    {
+        src: `${sitesURL}/05.jpg`,
+        alt: `Coredrinks`
+    },
+    {
+        src: `${sitesURL}/06.jpg`,
+        alt: `Amar e Cuidar`
+    },
+    {
+        src: `${sitesURL}/07.jpg`,
+        alt: `Nutra Corpore`
+    },
+    {
+        src: `${sitesURL}/08.jpg`,
+        alt: `KES`
+    },
+];
+
+export const newLogoContent : Array<ImageBasic> = [
+    {
+        src: `${logosURL}/01.jpg`,
+        alt: `Kiwi Pilates`
+    },
+    {
+        src: `${logosURL}/02.jpg`,
+        alt: `Roll Music`
+    },
+    {
+        src: `${logosURL}/03.jpg`,
+        alt: `Wendell Uguetto`
+    },
+    {
+        src: `${logosURL}/04.jpg`,
+        alt: `Carneiro e Cagnacci`
+    },
+    {
+        src: `${logosURL}/05.jpg`,
+        alt: `Coredrinks`
+    },
+    {
+        src: `${logosURL}/06.jpg`,
+        alt: `Amar e Cuidar`
+    },
+    {
+        src: `${logosURL}/07.jpg`,
+        alt: `Nutra Corpore`
+    },
+    {
+        src: `${logosURL}/08.jpg`,
+        alt: `KES`
+    },
+    {
+        src: `${logosURL}/09.jpg`,
+        alt: `KES`
+    },
+];
+
+export const newSocialContent : Array<ImageBasic> = [
+    {
+        src: `${socialURL}/01.jpg`,
+        alt: `Kiwi Pilates`
+    },
+    {
+        src: `${socialURL}/02.jpg`,
+        alt: `Roll Music`
+    },
+    {
+        src: `${socialURL}/03.jpg`,
+        alt: `Wendell Uguetto`
+    },
+    {
+        src: `${socialURL}/04.jpg`,
+        alt: `Carneiro e Cagnacci`
+    },
+    {
+        src: `${socialURL}/05.jpg`,
+        alt: `Coredrinks`
+    },
+    {
+        src: `${socialURL}/06.jpg`,
+        alt: `Amar e Cuidar`
+    },
+    {
+        src: `${socialURL}/07.jpg`,
+        alt: `Nutra Corpore`
+    },
+    {
+        src: `${socialURL}/08.jpg`,
+        alt: `KES`
+    },
+    {
+        src: `${socialURL}/09.jpg`,
+        alt: `KES`
+    },
+];
+
+export const newMarketingCOntent : Array<ImageBasic> = [
+    {
+        src: `${marketingURL}/01.jpg`,
+        alt: `Kiwi Pilates`
+    },
+    {
+        src: `${marketingURL}/02.jpg`,
+        alt: `Roll Music`
+    },
+    {
+        src: `${marketingURL}/03.jpg`,
+        alt: `Wendell Uguetto`
+    },
+    {
+        src: `${marketingURL}/04.jpg`,
+        alt: `Carneiro e Cagnacci`
+    },
+    {
+        src: `${marketingURL}/05.jpg`,
+        alt: `Coredrinks`
+    },
+    {
+        src: `${marketingURL}/06.jpg`,
+        alt: `Amar e Cuidar`
     },
 ]

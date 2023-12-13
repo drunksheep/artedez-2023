@@ -1,7 +1,5 @@
 import { cardsContent } from "@/app/content/plans";
 import { BrowserView, MobileView } from 'react-device-detect';
-import { Swiper, SwiperSlide } from "swiper/react";
-import MobileHelper from "../MobileHelper";
 import PlanCard, { PlanCardProps } from "./PlanCard";
 
 export default function Plans() {
@@ -33,6 +31,8 @@ export default function Plans() {
                                     value={item.value}
                                     ctaString={item.ctaString}
                                     doubleLimit={item.doubleLimit}
+                                    limit2={item.limit2}
+                                    usesLimit2={item.usesLimit2}
                                     key={idx} />
                             )
                         }
@@ -40,36 +40,26 @@ export default function Plans() {
                 </BrowserView>
 
                 <MobileView>
+                    {
+                        cardsContent.map((item: PlanCardProps, idx: number) =>
+                            <div className="mb-10" key={idx}>
+                                <PlanCard
+                                    
+                                    title={item.title}
+                                    subtitle={item.subtitle}
+                                    description={item.description}
+                                    limit={item.limit}
+                                    extraProd={item.extraProd || ''}
+                                    value={item.value}
+                                    ctaString={item.ctaString}
+                                    doubleLimit={item.doubleLimit}
+                                    limit2={item.limit2}
+                                    usesLimit2={item.usesLimit2}
+                                />
+                            </div>
+                                )
 
-                    <Swiper
-                        slidesPerView={1}
-                        centeredSlides
-                        autoHeight
-                        className="mb-10"
-                    >
-                        {
-                            cardsContent.map((item: PlanCardProps, idx: number) =>
-                                <SwiperSlide key={idx}>
-                                    <PlanCard
-                                        title={item.title}
-                                        subtitle={item.subtitle}
-                                        description={item.description}
-                                        limit={item.limit}
-                                        extraProd={item.extraProd || ''}
-                                        value={item.value}
-                                        ctaString={item.ctaString}
-                                        doubleLimit={item.doubleLimit}
-                                    />
-                                </SwiperSlide>
-                            )
-
-                        }
-
-                    </Swiper>
-
-                    <div className="mb-10">
-                        <MobileHelper />
-                    </div>
+                    }
 
                 </MobileView>
 

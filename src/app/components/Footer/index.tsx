@@ -6,12 +6,12 @@ export default function Footer() {
         <footer className="bg-black pt-[60px] pb-[40px]">
             <div className="container">
                 <div className='flex flex-row justify-between items-center mb-[20px]'>
-                    <img height="29" width="29" alt="Logo Artedez" src={'/images/logo-minimal.svg'} />
+                    <img height="40" width="40" alt="Logo Artedez" src={'/images/logo-minimal.svg'} />
                     <div className="flex flex-row flex-nowrap gap-x-5 ">
                         {
                             socialMediaURLs.map((item: SocialMediaURLs, idx: number) =>
                                 <a key={idx}
-                                    className="font-nexa text-white text-10 lg:text-12 font-bold transition-all duration-300 ease-in-out hover:text-pink-400 uppercase"
+                                    className="font-nexa text-white text-10 lg:text-12 font-bold transition-all duration-300 ease-in-out hover:text-purple-400 uppercase"
                                     href={item.url}
                                     target="_BLANK"
                                     rel="noopener noreferrer">
