@@ -1,11 +1,12 @@
-import { campaigns, mainServices, paid, print, social, visualIdentities, webDesign } from "@/app/content/services";
+import { campaigns, mainServices, newLogoContent, newMarketingCOntent, newSocialContent, newWebContent, paid, print, social, visualIdentities, webDesign } from "@/app/content/services";
 import { CarouselMap } from "@/app/types/carouselMap";
 import { ImageBasic } from "@/app/types/image";
 import { ServiceItem } from "@/app/types/serviceItem";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useState } from "react";
-import { BrowserView, MobileView } from 'react-device-detect';
-import { Swiper, SwiperSlide } from "swiper/react";
+import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MobileHelper from "../../MobileHelper";
 import { Card } from "../Card";
 import ServiceCarousel from "../ServiceCarousel";
@@ -53,19 +54,120 @@ export default function MainServices() {
         <Dialog.Root>
 
             <MobileView>
-                <Swiper slidesPerView={1}>
+
+                <Swiper
+                    spaceBetween={40}
+                    speed={3000}
+                    autoplay={{
+                        delay: 0,
+                        disableOnInteraction: false,
+                    }}
+                    loop
+                    allowTouchMove={false}
+                    slidesPerView={isMobile ? 1 : 3}
+                    centeredSlides
+                    modules={[Autoplay]}
+                >
+
                     {
-                        mainServices?.map((item: ServiceItem, idx: number) =>
-                            <SwiperSlide key={idx}>
-                                <Card item={item} idx={idx} handleSlideCategory={handleSlideCategory} />
+                        newWebContent.map((item: ImageBasic, idx: number) =>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
+                                <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover object-top" />
                             </SwiperSlide>
                         )
                     }
                 </Swiper>
 
-                <div className="my-10">
-                    <MobileHelper />
-                </div>
+                <p className="text-white text-16 mb-2 text-center my-10 font-bold">
+                    Layouts para sites e landing pages
+                </p>
+
+                <Swiper
+                    spaceBetween={40}
+                    speed={3000}
+                    autoplay={{
+                        delay: 0,
+                        disableOnInteraction: false,
+                        reverseDirection: true,
+                    }}
+                    loop
+                    allowTouchMove={false}
+                    slidesPerView={isMobile ? 1 : 3}
+                    centeredSlides
+                    modules={[Autoplay]}
+                    className="mt-10"
+                >
+
+                    {
+                        newLogoContent.map((item: ImageBasic, idx: number) =>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
+                                <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>
+
+                <p className="text-white text-16 mb-2 text-center my-10 font-bold">
+                    Identidades Visuais
+                </p>
+
+                <Swiper
+                    spaceBetween={40}
+                    speed={3000}
+                    autoplay={{
+                        delay: 0,
+                        disableOnInteraction: false,
+                    }}
+                    loop
+                    allowTouchMove={false}
+                    slidesPerView={isMobile ? 1 : 3}
+                    centeredSlides
+                    modules={[Autoplay]}
+                    className="mt-10"
+                >
+
+                    {
+                        newSocialContent.map((item: ImageBasic, idx: number) =>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
+                                <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>
+
+                <p className="text-white text-16 mb-2 text-center my-10 font-bold">
+                    Social Media
+                </p>
+
+                <Swiper
+                    spaceBetween={40}
+                    speed={3000}
+                    autoplay={{
+                        delay: 0,
+                        disableOnInteraction: false,
+                        reverseDirection: true,
+                    }}
+                    loop
+                    allowTouchMove={false}
+                    slidesPerView={isMobile ? 1 : 3}
+                    centeredSlides
+                    modules={[Autoplay]}
+                    className="mt-10"
+                >
+
+                    {
+                        newMarketingCOntent.map((item: ImageBasic, idx: number) =>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
+                                <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
+                            </SwiperSlide>
+                        )
+                    }
+                </Swiper>
+
+                <p className="text-white text-16 mb-2 text-center my-10 font-bold">
+                    Campanhas
+                </p>
+
             </MobileView>
 
             <BrowserView>

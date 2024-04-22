@@ -53,7 +53,7 @@ export default function Faq() {
 
             <div className="bg-gradient-to-t from-purple-400 to-transparent h-[2000px] w-full absolute bottom-0 left-0" />
 
-            <Link href="#plans" className="bg-pink-400 rounded-2xl font-bold w-full border-[4px] border-white text-18 lg:text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400 max-w-[320px] lg:max-w-[400px] z-10 absolute bottom-[-33px] left-0 right-0 m-auto" title="Conheça os planos">
+            <Link href="#plans" className="bg-pink-400 rounded-full font-bold w-full border-[4px] border-white text-18 lg:text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400 max-w-[320px] lg:max-w-[400px] z-10 absolute bottom-[-33px] left-0 right-0 m-auto" title="Conheça os planos">
                 <span>
                     Quero conhecer um plano!
                 </span>

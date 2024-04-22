@@ -44,7 +44,7 @@ export default function Brands() {
                         }}
                         loop
                         allowTouchMove={false}
-                        slidesPerView={isMobile ? 2 : 3}
+                        slidesPerView={isMobile ? 1 : 3}
                         centeredSlides
                         modules={[Autoplay]}
                     >
@@ -74,7 +74,7 @@ export default function Brands() {
                         }}
                         loop
                         allowTouchMove={false}
-                        slidesPerView={3}
+                        slidesPerView={isMobile ? 1 : 3}
                         centeredSlides
                         modules={[Autoplay]}
                     >

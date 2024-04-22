@@ -19,7 +19,7 @@ export default function HeroText() {
 
             <Link className="bg-pink-400 rounded-full font-bold w-full border-2 lg:border-[4px] border-white text-18 lg:text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 mb-[30px] transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400" href="#plans" title="Conheça os planos">
                 <span>
-                    Quero conhecer os planos!
+                    Quero conhecer os produtos!
                 </span>
                 <FontAwesomeIcon icon={faArrowDown} />
             </Link>

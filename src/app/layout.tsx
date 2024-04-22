@@ -1,11 +1,13 @@
+import { Metadata } from "next";
 import localFont from "next/font/local";
+import FacebookPixel from "./components/FacebookPixel";
 import './globals.css';
 
 
 const ceraPro = localFont({
   src: [
     {
-      path: '../../public/fonts/CeraPro/ceraProRegular.otf', 
+      path: '../../public/fonts/CeraPro/ceraProRegular.otf',
       weight: '400',
     },
     {
@@ -14,18 +16,22 @@ const ceraPro = localFont({
     }
   ],
   variable: '--font-cera'
-}); 
+});
 
 const nexaHeavy = localFont({
   src: [
     {
-      path: '../../public/fonts/NexaHeavy/NexaHeavy.otf', 
+      path: '../../public/fonts/NexaHeavy/NexaHeavy.otf',
       weight: '700',
     },
   ],
   variable: '--font-nexa'
-}); 
+});
 
+export const metadata: Metadata = {
+  title: 'Arte Dez - Design',
+  description: 'Entregamos não apenas projetos, mas resultados que impulsionam o seu negócio e trazem lucro real',
+}
 
 export default function RootLayout({
   children,
@@ -34,7 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="font-cera">{children}</body>
+      <body className="font-cera">
+        {children}
+        <FacebookPixel />
+        </body>
     </html>
   )
 }

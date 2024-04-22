@@ -1,5 +1,6 @@
 import { ServiceItem } from "@/app/types/serviceItem";
 import * as Dialog from "@radix-ui/react-dialog";
+import { isMobile } from 'react-device-detect';
 
 interface RegularCardProps {
     item: ServiceItem;
@@ -9,17 +10,17 @@ interface RegularCardProps {
 
 export const Card = ({ item, idx, handleSlideCategory } : RegularCardProps) => (
     <div className="row-span-2" key={idx}>
-        <div className="min-h-[490px] border-b-2 flex flex-cloumn items-end px-5 py-5 rounded-[15px] relative overflow-hidden border-4 border-transparent hover:border-white transition-all ease-in-out duration-300 hover:shadow-2xl cursor-pointer max-w-[80%] mx-auto lg:max-w-none lg:mx-0" key={idx}>
+        <div className="min-h-[490px] border-b-2 flex items-end px-5 py-5 rounded-[15px] relative overflow-hidden border-4 border-transparent hover:border-white transition-all ease-in-out duration-300 hover:shadow-2xl cursor-pointer max-w-[80%] mx-auto lg:max-w-none lg:mx-0" key={idx}>
             <Dialog.Trigger className="trigger" asChild>
                 <div>
-                    <img className="absolute top-0 left-0 w-full h-full" src={item.bg || ''} alt={item.title || ''} width={290} height={500} data-cat={item.category || 'webDesign'} 
+                    <img className="absolute top-0 left-0 w-full h-full" src={isMobile && item.mobileBg ? item.mobileBg : item.bg} alt={item.title || ''} width={290} height={500} data-cat={item.category || 'webDesign'} 
                     onClick={e => handleSlideCategory(e)} />
-                    <h2 className="text-white leading-[48px] relative z-10 pointer-events-none">
-                        <span className="tracking-[2.2px]">
+                    <h2 className="text-white leading-[38px] lg:leading-[48px] relative z-10 pointer-events-none">
+                        <span className="tracking-[1.1px] lg:tracking-[2.2px]">
                             {item.title}
                         </span>
                         <br />
-                        <strong className="text-36 leading-[30px]">
+                        <strong className="text-28 lg:text-36 leading-[30px]">
                             {item.subtitle}
                         </strong>
                     </h2>

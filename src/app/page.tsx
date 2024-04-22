@@ -2,7 +2,6 @@
 
 import About from "./components/About";
 import Brands from "./components/Brands";
-import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
@@ -10,6 +9,7 @@ import Plans from "./components/Plans";
 import Services from "./components/Services";
 
 export default function Home() {
+
   return (
     <>
       <Header />
@@ -19,7 +19,7 @@ export default function Home() {
         <Plans />
         <Brands />
         <About />
-        <Faq />
+        {/* <Faq /> */}
       </main>
       <Footer />
     </>
