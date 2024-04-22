@@ -1,4 +1,6 @@
 import { cardsContent } from "@/app/content/plans";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BrowserView, MobileView } from 'react-device-detect';
 import PlanCard, { PlanCardProps } from "./PlanCard";
 
@@ -10,12 +12,12 @@ export default function Plans() {
                 <h2 className="text-white font-bold font-nexa  text-24 leading-[24px] lg:text-40 lg:leading-[40px] uppercase mb-[40px]">
                     conheça
                     <span className="text-56 block leading-[52px]">
-                        nossos planos
+                        nossos produtos
                     </span>
                 </h2>
 
                 <p className="text-white text-14 lg:text-18 mb-10">
-                    <b>Simples e transparente:</b> nosso sistema de <b>Cotas Criativas</b> coloca o controle nas suas mãos Cada cota criativa equivale a uma arte, exceto para identidades visuais e layouts de sites, que consomem 4 cotas
+                    Para receber uma proposta, clique nos botões abaixo e entre em contato através do nosso Whatsapp. <br />
                 </p>
 
                 <BrowserView>
@@ -28,7 +30,7 @@ export default function Plans() {
                                     description={item.description}
                                     limit={item.limit}
                                     extraProd={item.extraProd || ''}
-                                    value={item.value}
+                                    // value={item.value}
                                     ctaString={item.ctaString}
                                     doubleLimit={item.doubleLimit}
                                     limit2={item.limit2}
@@ -44,27 +46,27 @@ export default function Plans() {
                         cardsContent.map((item: PlanCardProps, idx: number) =>
                             <div className="mb-10" key={idx}>
                                 <PlanCard
-                                    
+
                                     title={item.title}
                                     subtitle={item.subtitle}
                                     description={item.description}
                                     limit={item.limit}
                                     extraProd={item.extraProd || ''}
-                                    value={item.value}
+                                    // value={item.value}
                                     ctaString={item.ctaString}
                                     doubleLimit={item.doubleLimit}
                                     limit2={item.limit2}
                                     usesLimit2={item.usesLimit2}
                                 />
                             </div>
-                                )
+                        )
 
                     }
 
                 </MobileView>
 
                 <p className="text-14 lg:text-18 text-white leading-[20px] lg:leading-[24px]">
-                    <b>Cotas adicionais*:</b> Nos planos mensais, cada cota adicional solicitada terá o valor de R$ 89,00. Já nos planos semestrais, o valor da cota adicional será de R$ 69,90. <span className="text-gray-400">*o plano arte dez possui cotas ilimitadas.</span>
+                    Para orçamentos de demais serviços ou planos personalizados para agências ou empresas, entre em contato via  <a target="_BLANK" href="https://api.whatsapp.com/send?phone=5511964637406&text=Ol%C3%A1,%20gostaria%20de%20uma%20proposta%20personalizada." className="text-green-400  hover:underline">whatsapp <FontAwesomeIcon icon={faWhatsapp} /> </a>
                 </p>
 
             </div>

@@ -11,7 +11,7 @@ export default function Footer() {
                         {
                             socialMediaURLs.map((item: SocialMediaURLs, idx: number) =>
                                 <a key={idx}
-                                    className="font-nexa text-white text-10 lg:text-12 font-bold transition-all duration-300 ease-in-out hover:text-purple-400 uppercase"
+                                    className="font-nexa text-white text-10 lg:text-12 font-bold transition-all duration-300 ease-in-out hover:text-pink-400 uppercase"
                                     href={item.url}
                                     target="_BLANK"
                                     rel="noopener noreferrer">

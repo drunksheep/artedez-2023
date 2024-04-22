@@ -1,14 +1,12 @@
 import { socialMediaURLs } from '@/app/content/general';
-import { swiperMarqueeItems } from '@/app/content/marquee';
 import { SocialMediaURLs } from '@/app/types/socialMedia';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import SwiperMarquee from "../SwiperMarquee";
 import TitleHeadline from '../TitleHeadline';
 
 export default function About() {
     return (
-        <section className="pt-[420px] lg:pt-[200px] relative pb-[150px]">
+        <section className="pt-[420px] lg:pt-[200px] relative lg:pb-[150px]">
             <div className="container relative z-10">
 
                 <img src="/images/fernando.png" className='mb-10 lg:mb-0 lg:left-[-50px] lg:top-[-50px] lg:absolute lg:max-w-[600px]' alt="" width={680} height={970} />
@@ -44,9 +42,9 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="absolute w-full left-0 bottom-0 rotate-[2deg] z-10">
+            {/* <div className="absolute w-full left-0 bottom-[-75px] rotate-[2deg] z-10">
                 <SwiperMarquee items={swiperMarqueeItems} />
-            </div>
+            </div> */}
 
         </section>
     )

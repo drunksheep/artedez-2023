@@ -71,7 +71,7 @@ export default function MainServices() {
 
                     {
                         newWebContent.map((item: ImageBasic, idx: number) =>
-                            <SwiperSlide className="bg-white min-w-[300px] min-h-[250px] rounded-2xl relative overflow-hidden" key={idx}>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
                                 <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover object-top" />
                             </SwiperSlide>
                         )
@@ -100,7 +100,7 @@ export default function MainServices() {
 
                     {
                         newLogoContent.map((item: ImageBasic, idx: number) =>
-                            <SwiperSlide className="bg-white min-w-[300px] min-h-[250px] rounded-2xl relative overflow-hidden" key={idx}>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
                                 <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
                             </SwiperSlide>
                         )
@@ -128,7 +128,7 @@ export default function MainServices() {
 
                     {
                         newSocialContent.map((item: ImageBasic, idx: number) =>
-                            <SwiperSlide className="bg-white min-w-[300px] min-h-[250px] rounded-2xl relative overflow-hidden" key={idx}>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
                                 <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
                             </SwiperSlide>
                         )
@@ -157,7 +157,7 @@ export default function MainServices() {
 
                     {
                         newMarketingCOntent.map((item: ImageBasic, idx: number) =>
-                            <SwiperSlide className="bg-white min-w-[300px] min-h-[250px] rounded-2xl relative overflow-hidden" key={idx}>
+                            <SwiperSlide className="bg-white min-w-[300px] min-h-[300px] rounded-2xl relative overflow-hidden" key={idx}>
                                 <img src={item.src} alt={item.alt} className="absolute top-0 left-0 w-full h-full object-cover" />
                             </SwiperSlide>
                         )

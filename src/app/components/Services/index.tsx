@@ -1,14 +1,9 @@
-import { SellingCards } from "@/app/content/sellingCard";
-import { SellingCardProps } from "@/app/types/sellingCard";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { BrowserView, MobileView } from 'react-device-detect';
-import { Swiper, SwiperSlide } from "swiper/react";
-import MobileHelper from "../MobileHelper";
+import { BrowserView } from 'react-device-detect';
 import TitleHeadline from "../TitleHeadline";
 import MainServices from "./MainServices";
-import SellingCard from "./SellingCard";
 
 
 export default function Services() {
@@ -33,9 +28,9 @@ export default function Services() {
 
                 <MainServices />
 
-                <TitleHeadline title="conheça" subtitle="nossos diferenciais" />
+                {/* <TitleHeadline title="conheça" subtitle="nossos diferenciais" /> */}
 
-                <BrowserView>
+                {/* <BrowserView>
                     {
                         SellingCards &&
                         <div className="lg:grid lg:grid-cols-3 lg:gap-x-[60px]">
@@ -90,7 +85,7 @@ export default function Services() {
                         <MobileHelper />
                     </div>
 
-                </MobileView>
+                </MobileView> */}
 
             </div>
 
@@ -98,7 +93,7 @@ export default function Services() {
 
             <Link className="bg-pink-400 rounded-full font-bold w-full border-[4px] border-white text-18 lg:text-24 py-3 flex flex-row flex-nowrap justify-center align-center items-center gap-x-2 transition-all ease-in-out duration-300 hover:bg-white hover:border-pink-400 hover:text-pink-400 absolute bottom-[-35px] left-0 right-0 m-auto max-w-[320px] lg:max-w-[430px]" href="#plans" title="Conheça os planos">
                 <span>
-                    Quanto preciso investir?
+                    Quero solicitar um orçamento
                 </span>
                 <FontAwesomeIcon className="max-w-[20px]" size="2xs" icon={faArrowDown} />
             </Link>
